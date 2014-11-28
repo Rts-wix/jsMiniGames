@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Spil</title>
+</head>
+
+<script language="javascript" type="text/javascript">
+
+	var detHemmeligeTal = 42;
+	
+	var checkTal = function()
+	{
+		var inputBox = document.querySelector("#mitTal");
+		var tal = inputBox.value;
+		
+		//alert(tal);
+		
+		var svar = document.querySelector("#svar");
+		
+		if (detHemmeligeTal == tal)
+		{
+			svar.textContent = "Du gættede rigtigt";
+		}
+		else
+		{
+			svar.textContent = "Du gættede forkert";
+		}
+	}
+
+</script>
+<body>
+
+	<input type="text" id="mitTal" />
+    <button id="check" onClick="checkTal()">Check</button>
+    
+    <p id="svar">Svaret er...</p>
+    
+
+</body>
+</html>

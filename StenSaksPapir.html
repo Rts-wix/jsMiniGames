@@ -1,0 +1,92 @@
+<html>
+    
+    <button id="sten" onclick="selector('Sten')">Sten</button> 
+    <button id="saks" onclick="selector('Saks')">Saks</button> 
+    <button id="papir" onclick="selector('Papir')">Papir</button> 
+    
+    
+     <p id="computerHaand"></p>
+     <p id="brugerHaand"></p>
+    
+    <p id="udfald"></p>
+    
+    <script type="text/javascript">
+        var vinder = "uafgjort";
+        var selector = function(brugerHaand)
+        {
+            vinder = "uafgjort";
+            document.querySelector("#brugerHaand").textContent = brugerHaand;
+            
+            // hvem vinder ?
+            // brugeren vinder
+            if(brugerHaand == "Sten" 
+               && haanden == "Saks")
+            {
+                vinder = "B";
+            }
+            else if(brugerHaand == "Saks" 
+                    && haanden == "Papir")
+            {
+                vinder = "B";
+            } else if(brugerHaand == "Papir" 
+                    && haanden == "Sten")
+            {
+                vinder = "B";
+            }
+            // computeren vinder
+            else if(brugerHaand == "Saks" 
+               && haanden == "Sten")
+            {
+                vinder = "C";
+            }
+            else if(brugerHaand == "Papir" 
+                    && haanden == "Saks")
+            {
+                vinder = "C";
+            } else if(brugerHaand == "Sten" 
+                    && haanden == "Papir")
+            {
+                vinder = "C";
+            }
+            
+            // udskriv res
+            document.querySelector("#computerHaand").textContent = haanden;
+            console.log(vinder);
+            var udfald = document.querySelector("#udfald");
+            if (vinder == "B")
+            {
+                udfald.textContent = "Du har vundet!";
+            }
+            else if (vinder == "C")
+            {
+                udfald.textContent = "Computeren har vundet!";
+            }
+            else
+            {
+                udfald.textContent = "Uafgjort.";
+            }
+        }
+        
+    var rHaand = Math.random() * 3;
+    var haanden;
+        
+    if (rHaand < 1)
+    {
+        haanden = "Sten";
+    }
+    else if(rHaand < 2)
+    {
+        haanden = "Saks";
+    }
+    else 
+    {
+        haanden = "Papir";
+    }
+    
+    //document.querySelector("#computerHaand").textContent = haanden;
+        
+    </script>
+
+   
+
+</html>
