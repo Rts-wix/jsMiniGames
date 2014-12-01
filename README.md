@@ -3,6 +3,11 @@ jsMiniGames
 
 A collection of VERY basic and VERY small games.
 
+Gæt et tal
+----------
+
+[Prøv spillet](GætEtTal.html)
+
 Sten saks papir
 ---------------
 
