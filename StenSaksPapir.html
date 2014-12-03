@@ -5,8 +5,12 @@
     <button id="papir" onclick="selector('Papir')">Papir</button> 
     
     
-     <p>Computerens tegn: <span id="computerHaand"></span></p>
-     <p>&nbsp;&nbsp;Brugerens tegn:<span id="brugerHaand"></span></p>
+     <p>Computerens tegn: <span id="computerHaand">
+         <img id="" width="20">
+         </span></p>
+     <p>Brugerens tegn:<span id="brugerHaand">
+         <img width="20">
+         </span></p>
     
     <p id="udfald"></p>
     
@@ -14,11 +18,18 @@
     
     <script type="text/javascript">
         var vinder = "uafgjort";
+        var handBilleder = new Array();
+        handBilleder["Sten"] = "Sten.jpg";
+        handBilleder["Saks"] = "Saks.jpg";
+        handBilleder["Papir"] = "Papir.jpg";
+        
         var selector = function(brugerHaand)
         {
             vinder = "uafgjort";
-            document.querySelector("#brugerHaand").textContent = brugerHaand;
-            
+            //document.querySelector("#brugerHaand").textContent = brugerHaand;
+            brugerBillede 
+                = document.querySelector("#brugerHaand img");
+            brugerBillede.src = handBilleder[brugerHaand];
             // hvem vinder ?
             // brugeren vinder
             if(brugerHaand == "Sten" 
@@ -52,7 +63,11 @@
             }
             
             // udskriv res
-            document.querySelector("#computerHaand").textContent = haanden;
+            // document.querySelector("#computerHaand").textContent = haanden;
+            compBillede 
+                = document.querySelector("#computerHaand img");
+            compBillede.src = handBilleder[haanden];
+            
             console.log(vinder);
             var udfald = document.querySelector("#udfald");
             if (vinder == "B")
