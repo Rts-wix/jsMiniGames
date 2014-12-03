@@ -1,0 +1,38 @@
+<html>
+<head>
+</head>
+    <body>
+        
+        
+        <h1>Syvtabbelen</h1>
+      
+        <ol id="tabel">
+        </ol>
+        
+        <img id="succesBillede" src="">
+        
+        <script type="text/javascript">
+        
+            // udskriver syvtabellen 
+            // i consolen
+            
+            var tabelStr = 10;
+            tabel = 7;
+            htmlTabel = document.querySelector("#tabel");
+            for(var i = 1; i <= tabelStr; i++)
+            {
+                console.log(i * tabel);
+                
+                var node = document.createElement("li");
+                node.innerHTML = (i * tabel);
+                
+                htmlTabel.appendChild( node );
+            }
+            
+            var billede = document.querySelector("#succesBillede");
+            billede.src = "syvtabel.jpg";
+            
+        </script>
+        
+    </body>
+</html>
